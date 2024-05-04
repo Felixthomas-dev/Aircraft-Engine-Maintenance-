@@ -146,7 +146,7 @@ This project is open source and available under the [MIT License](LICENSE), prom
 
 ---
 ### Disclaimer
-The content of this project is for educational and informational purposes only. The dataset used is a simulation and does not represent real-world data from any aircraft or aviation company. The results and analyses presented do not guarantee safety or predictive outcomes in real-w##orld scenarios. The use of this project does not imply any endorsement or affiliation with any aviation organization. Always refer to certified professionals for aircraft engine maintenance and related safety measures.
+The content of this project is for educational and informational purposes only. The dataset used is a simulation and does not represent real-world data from any aircraft or aviation company. The results and analyses presented do not guarantee safety or predictive outcomes in real-world scenarios. The use of this project does not imply any endorsement or affiliation with any aviation organization. Always refer to certified professionals for aircraft engine maintenance and related safety measures.
 
 
 
