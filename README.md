@@ -15,6 +15,7 @@
 6. [Insights for Predictive Maintenance Model](#insights-for-predictive-maintenance-model)
 7. [Contributions](#contributions)
 8. [License](#license)
+9. [Disclaimer](#disclaimer)
 
 ---
 
@@ -143,7 +144,9 @@ Contributions are welcome! To contribute:
 ### License
 This project is open source and available under the [MIT License](LICENSE), promoting free use, modification, and distribution of the software, ensuring that contributions are welcomed and recognized.
 
-
+---
+### Disclaimer
+The content of this project is for educational and informational purposes only. The dataset used is a simulation and does not represent real-world data from any aircraft or aviation company. The results and analyses presented do not guarantee safety or predictive outcomes in real-w##orld scenarios. The use of this project does not imply any endorsement or affiliation with any aviation organization. Always refer to certified professionals for aircraft engine maintenance and related safety measures.
 
 
 
