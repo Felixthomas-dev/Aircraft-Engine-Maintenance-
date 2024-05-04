@@ -137,7 +137,8 @@ Contributions are welcome! To contribute:
 ---
 
 ### License
-This project is licensed under the MIT License. See the LICENSE file for more details
+This project is open source and available under the [MIT License](LICENSE), promoting free use, modification, and distribution of the software, ensuring that contributions are welcomed and recognized.
+
 
 
 
