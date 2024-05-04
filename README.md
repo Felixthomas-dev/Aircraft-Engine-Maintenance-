@@ -12,8 +12,9 @@
    6. [Multivariate Analysis](#multivariate-analysis)
 4. [Feature Engineering](#feature-engineering)
 5. [Data Visualization](#data-visualization)
-6. [Contributions](#contributions)
-7. [License](#license)
+6. [Insights for Predictive Maintenance Model](#insights-for-predictive-maintenance-model)
+7. [Contributions](#contributions)
+8. [License](#license)
 
 ---
 
@@ -38,96 +39,99 @@ The dataset contains records for aircraft engines at various points in time. Key
 
 ### Exploratory Data Analysis
 
----
+--
 
 #### Data Cleaning
-The dataset was cleaned to ensure data consistency and integrity. Initial data checks were conducted to understand the shape and summary statistics of the dataset.
+- The dataset was cleaned to ensure data consistency and integrity. Initial data checks were conducted to understand the shape and summary statistics of the dataset.
 
 #### Handling Missing Values
-To handle missing values, the median was used for imputation. The following steps were taken to identify and visualize missing data:
+- To handle missing values, the median was used for imputation. The following steps were taken to identify and visualize missing data:
 
 #### Visualize Missing Values
 - **Bar plot with `missingno`**: To visualize columns with missing data.
 - **Heatmap with `seaborn`**: To illustrate missing patterns.
 
 #### Handle Missing Values
-- **Imputed Temperature and Pressure with the median.**
-- **Validated that missing values were appropriately addressed.**
+- Imputed Temperature and Pressure with the median.
+- Validated that missing values were appropriately addressed.
 
 #### Handling Outliers
 Outliers were identified and removed using the Interquartile Range (IQR) method:
 
 #### Calculate IQR
-- **IQR = Q3 - Q1 for numerical columns.**
+- **IQR = Q3 - Q1** for numerical columns.
 
 #### Identify Outliers
-- **Outliers were those data points falling outside 1.5 times the IQR from Q1 and Q3.**
+- Outliers were those data points falling outside 1.5 times the IQR from Q1 and Q3.
 
 #### Remove Outliers
-- **Rows with outliers were removed, resulting in a dataset with reduced noise.**
+- Rows with outliers were removed, resulting in a dataset with reduced noise.
 
 #### Univariate Analysis
-To understand the distribution of key variables, univariate analysis was performed on `Temperature`, `Pressure`, `Rotational_Speed`, and `Engine_Health`. Histogram plots with KDE (Kernel Density Estimation) were used to visualize the distribution of these features.
+- To understand the distribution of key variables, univariate analysis was performed on `Temperature`, `Pressure`, `Rotational_Speed`, and `Engine_Health`. Histogram plots with KDE (Kernel Density Estimation) were used to visualize the distribution of these features.
 
 #### Bivariate Analysis
-Bivariate analysis explored relationships between pairs of variables:
+- Bivariate analysis explored relationships between pairs of variables:
 
 #### Pairplot
 - **A pairplot with `seaborn`** to visualize relationships among features, colored by `Engine_Failure`.
 
 #### Scatter Plots
-- **Scatter plots to identify any trends or correlations between key features.**
+- **Scatter plots** to identify any trends or correlations between key features.
 
 #### Multivariate Analysis
-Multivariate analysis involved examining interactions among three or more variables:
+- **Multivariate** analysis involved examining interactions among three or more variables:
 
 #### Correlation Heatmap
-- **A heatmap to visualize correlations among `Temperature`, `Pressure`, `Rotational_Speed`, and `Engine_Health`.**
+- A heatmap to visualize correlations among `Temperature`, `Pressure`, `Rotational_Speed`, and `Engine_Health`.
 
 #### Time Series Analysis
-- **A time-series line plot for `Engine_Health`, with lines representing individual `Engine_IDs`.**
+- A time-series line plot for `Engine_Health`, with lines representing individual `Engine_IDs`.
 
 ---
 
 ### Feature Engineering
 Feature engineering was applied to enhance the predictive capabilities of the dataset:
 
----
+--
 
 #### Time-based Features
-- **Extracted the `Hour_of_Day` from the `Timestamp`** to capture temporal patterns.
+- Extracted the `Hour_of_Day` from the `Timestamp` to capture temporal patterns.
 
 #### Rolling Averages
-- **Created rolling averages for `Temperature`, `Rotational_Speed`, and `Engine_Health` with a window of 10.**
+- Created rolling averages for `Temperature`, `Rotational_Speed`, and `Engine_Health` with a window of 10.
 
 #### Binning
-- **Binned `Hour_of_Day` into `Night`, `Morning`, `Afternoon`, and `Evening`** to categorize the day into parts.
+- Binned `Hour_of_Day` into `Night`, `Morning`, `Afternoon`, and `Evening` to categorize the day into parts.
 
 #### Interaction Features
-- **Created an interaction feature by multiplying `Temperature` with `Rotational_Speed`.**
+- Created an interaction feature by multiplying `Temperature` with `Rotational_Speed`.
 ---
 
 ### Data Visualization
 Several types of visualizations were used to gain insights and communicate findings effectively:
 
+--
+- **Bar Charts:** Illustration of `Engine_Health` across different parts of the day.
+- **Box Plots:** Demonstration of the spread of `Engine_Health` across `Day_Part`.
+- **Violin Plots:** Visualization of the distribution of `Engine_Health` across `Day_Part`.
+- **Histograms:** Display of the distribution of `Engine_Health`.
+- **Line Charts:** Representation of trends in `Engine_Health` over time.
+- **Grouped Bar Charts:** Visualization of `Engine_Health` across `Day_Part` with and without `Engine_Failure`.
 ---
-#### Bar Charts
-- **Bar chart illustrating `Engine_Health` across different parts of the day (`Day_Part`).**
+### Insights for Predictive Maintenance Model
+The exploratory data analysis provided several insights that could inform a predictive maintenance model:
 
-#### Box Plots
-- **Box plot to demonstrate the spread of `Engine_Health` across `Day_Part`.**
+--
 
-#### Violin Plots
-- **Violin plot to show the distribution of `Engine_Health` across `Day_Part`.**
+- **Temporal Patterns:** The extraction of time-based features such as Hour_of_Day and subsequent binning into day parts can reveal potential times when engine health might decline.
 
-#### Histograms
-- **Histogram to display the distribution of `Engine_Health` and compare it across different `Day_Part`s.**
+- **Rolling Averages:** Rolling averages can smooth out short-term fluctuations and help identify longer-term trends, valuable for predicting maintenance needs.
 
-#### Line Charts
-- **Line chart to represent trends in `Engine_Health` across different times of day.**
+- **Feature Interactions:** Interaction features like Temp_Rotational_Interaction suggest that a combination of factors might influence engine health, pointing to complex relationships for predictive models to consider.
 
-#### Grouped Bar Charts
-- **Grouped bar chart showing `Engine_Health` across `Day_Part` with separate bars for `Engine_Failure`.**
+- **Engine Failure Trends:** Analysis showed trends in engine health over time, indicating that predictive models might leverage this information to forecast future failures
+
 ---
 ### Contributions
 Contributions are welcome! To contribute:
